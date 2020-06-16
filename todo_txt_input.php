@@ -22,7 +22,7 @@
         血液型: <input type="text" name="bloodType">
       </div>
       <div>
-        <button>送信</button>
+        <button>ここを押してね！！</button>
       </div>
     </fieldset>
   </form>

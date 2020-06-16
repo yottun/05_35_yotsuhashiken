@@ -22,8 +22,8 @@ $file = fopen('data/todo.csv', 'a');
 flock($file, LOCK_EX);
 // ファイル書き込み処理
 // fwrite($file, $write_data);
-if($file) {
-    foreach($ary as $line){
+if ($file) {
+    foreach ($ary as $line) {
         fputcsv($file, $line);
     }
 }
