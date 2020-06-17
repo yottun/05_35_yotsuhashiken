@@ -4,16 +4,39 @@
 
 // データの受取
 $name = $_POST['name'];
-$age = $_POST['age'];
-$bloodType = $_POST['bloodType'];
+$email = $_POST['email'];
+$soccer = $_POST['soccer'];
+$baseball = $_POST['baseball'];
+$rugby = $_POST['rugby'];
+$tableTennis = $_POST['tableTennis'];
+$wrestling = $_POST['wrestling'];
+
+$finePlay = $_POST['finePlay'];
+$unusualPlay = $_POST['unusualPlay'];
+$fairPlay = $_POST['fairPlay'];
+$impressive = $_POST['impressive'];
+$legend = $_POST['legend'];
 
 
 // 書き込みデータの作成（スペース区切りで最後に改行コードを追加）
 // $write_data = "{$todo} {$deadline}\n";
 
 $ary = array(
-    array("名前", "年齢", "血液型"),
-    array("{$name}", "{$age}", "{$bloodType}")
+    // array("名前", "年齢", "血液型"),
+    array(
+        "{$name}",
+        "{$email}",
+        "{$soccer}",
+        "{$baseball}",
+        "{$rugby}",
+        "{$tableTennis}",
+        "{$wrestling}",
+        "{$finePlay}",
+        "{$unusualPlay}",
+        "{$fairPlay}",
+        "{$impressive}",
+        "{$legend}"
+        )
 );
 
 // ファイルを開く処理
@@ -34,4 +57,4 @@ fclose($file);
 // 入力画面へ移動
 header("Location:todo_txt_input.php");
 
-// txtファイルへの書き込みのみ行うので表示する画面は存在しない
+// csvファイルへの書き込みのみ行うので表示する画面は存在しない
