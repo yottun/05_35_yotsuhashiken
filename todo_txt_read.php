@@ -1,23 +1,4 @@
 <?php
-// 出力用の文字列（ここに読み込んだデータをタグに入れた形式で追加していく）
-// $str = "";
-// ファイルを開く処理
-// $file = fopen('data/todo.csv', 'r');
-// ファイルロックの処理
-// flock($file, LOCK_EX);
-// ファイル書き込み処理
-// 1行づつ取り出す
-// if ($file) {
-//   while ($line = fgets($file)) {
-//     $str .= "<tr><td>{$line}<td><tr>";
-//   }
-// }
-
-
-// ファイルアンロックの処理
-// flock($file, LOCK_UN);
-// ファイル閉じる
-// fclose($file);
 
 //ファイルを変数に入れる
 $csv_file = file_get_contents('data/todo.csv');

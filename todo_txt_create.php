@@ -11,7 +11,7 @@ $rugby = $_POST['rugby'];
 $tableTennis = $_POST['tableTennis'];
 $wrestling = $_POST['wrestling'];
 
-$finePlay = $_POST['finePlay'];
+$finePlay = $_POST['fineplay'];
 $unusualPlay = $_POST['unusualPlay'];
 $fairPlay = $_POST['fairPlay'];
 $impressive = $_POST['impressive'];
@@ -31,7 +31,7 @@ $ary = array(
         "{$rugby}",
         "{$tableTennis}",
         "{$wrestling}",
-        "{$finePlay}",
+        "{$fineplay}",
         "{$unusualPlay}",
         "{$fairPlay}",
         "{$impressive}",
