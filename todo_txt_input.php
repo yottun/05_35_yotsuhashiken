@@ -65,8 +65,9 @@
   <div class="">
     <div class="col-md-6 col-md-offset-3">
       <form action="#">
-        <p><input type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control"></p>
-        <p><input type="submit" value="search" class="form-control btn btn-orimary w100"></p>
+        <!-- 動画検索 -->
+        <p><input type="text" id="search" placeholder="検索" autocomplete="off" class="form-control"></p>
+        <p><input id="searchBtn" type="submit" value="search" class="form-control btn btn-orimary w100"></p>
       </form>
       <div id="results"></div>
     </div>
@@ -79,7 +80,7 @@
   </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- <script src="main.js"></script> -->
+  <script src="main.js"></script>
   <script src="https://apis.google.com/js/client.js?onload=init"></script>
   <script>
     // const url = 'https://www.googleapis.com/youtube/v3/channels?part=contentDetails&forUsername=ユーザーID&key=AIzaSyATs4tZoydPgiDZSTU1oC4Wbq6KREH5MUI'

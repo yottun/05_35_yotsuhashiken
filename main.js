@@ -1,16 +1,23 @@
 function tplawesome(e, t) { res = e; for (var n = 0; n < t.length; n++) { res = res.replace(/\{\{(.*?)\}\}/g, function (e, r) { return t[n][r] }) } return res }
 
+$("button").on("click", function () {
+    $("#search").val($("[name=soccer]:checked").val());
+    console.log("input:checked");
+})
+
 $(function () {
-    $("form").on("submit", function (e) {
+    $("#searchBtn").on("click", function (e) {
         e.preventDefault();
         let request = gapi.client.youtube.search.list({
+            // rejionCode: 2,
             part: "snippet",
             type: "video",
-            q: encodeURIComponent($("#search").val()).replace(),
+            q: ($("#search").val()),
+            // q: encodeURIComponent($("#search").val()).replace(),
             // q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
-            maxResults: 5,
+            maxResults: 3,
             order: "viewCount",
-            publishedAfter: "2019-01-01T00:00:00Z"
+            // publishedAfter: "2019-01-01T00:00:00Z"
         });
         request.execute(function (response) {
             let results = response.result;
@@ -26,7 +33,7 @@ $(function () {
 
 function init() {
     // apiキー
-    gapi.client.setApiKey("AIzaSyDrazNcFfwlIRdkwuIkiBsMq8AlZzCGA98");
+    gapi.client.setApiKey("AIzaSyBswGw9pFpkn0la3cS6EFXwfTprHUqtHDM");
     gapi.client.load("youtube", "v3", function () {
     });
 }
